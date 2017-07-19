@@ -24,6 +24,9 @@ class Header extends Component {
                 without rel="noopener noreferrer" target="_blank">
                 Sinerjisoft Homework
               </a>
+              {this.props.isLoggedIn &&
+                <a className="navbar-brand" href="/">Logout</a>
+              }
             </div>
             <div className="pull-right">
             {this.props.pathName && this.props.pathName === "/users" &&

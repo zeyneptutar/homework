@@ -9,7 +9,6 @@ class UserForm extends Component {
   }
 
   render() {
-    console.log('Demo',this.props.user);
     return (
       <div>
         <h2 className="form-header">{this.props.newUser ? "New User" : "Update User"}</h2>
