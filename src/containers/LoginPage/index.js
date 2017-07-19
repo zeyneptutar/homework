@@ -8,7 +8,7 @@ import Input from '../../components/Input';
 import { createDemoUser } from '../../utils/user';
 import './style.css';
 
-class Login extends Component {
+class LoginPage extends Component {
   constructor() {
     super();
 
@@ -81,4 +81,4 @@ function mapStateToProps(state) {
 
 export default connect( mapStateToProps, {
   loginRequest
-})(Login);
+})(LoginPage);

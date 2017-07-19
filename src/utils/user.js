@@ -5,15 +5,15 @@ export function createDemoUser() {
       "password": "Demo",
       "name": "Demo name",
       "surname": "Demo surname",
-      "roles": ["Demo"],
+      "roles": "Admin",
     }
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("Demo", JSON.stringify(user));
   }
 }
 
 function checkDemoUser() {
-  if (JSON.parse(localStorage.getItem("user")) &&
-      JSON.parse(localStorage.getItem("user")).username === "Demo" &&
-      JSON.parse(localStorage.getItem("user")).password === "Demo")
+  if (JSON.parse(localStorage.getItem("Demo")) &&
+      JSON.parse(localStorage.getItem("Demo")).username === "Demo" &&
+      JSON.parse(localStorage.getItem("Demo")).password === "Demo")
   return true;
 }

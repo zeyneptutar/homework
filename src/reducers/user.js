@@ -6,6 +6,10 @@ const initialUsersState = {
   user: [],
 }
 
+export function clearUserState() {
+  return initialUsersState;
+}
+
 export function createNewUser(state, action) {
   return {
     ...state,
@@ -34,9 +38,18 @@ export function showUser(state, {payload: user}) {
   }
 }
 
+export function updateUser(state, {payload: user}) {
+  return {
+    ...state,
+    ...user,
+  }
+}
+
 export default handleActions({
+  clearUserState,
   createNewUser,
   getUsers,
   removeUser,
   showUser,
+  updateUser,
 }, initialUsersState);
